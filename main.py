@@ -1,12 +1,12 @@
 from spy_details import spy_name,spy_age,spy_rating #importing spy_name,spy_age,spy_rating from spy_details
 print"Hello Buddy"
 print"What's up?"
-def spy_chat(spy_name,spy_age,spy_rating): #declining the function
+def spy_chat(spy_name,spy_age,spy_rating): #defining the function
     print "Here are you're options " + spy_name
     show_menu=True
     while show_menu:
 
-        spy_choice=input("What do you want to do \n 1. Add a status \n 2. Add a friend \n 0.Exit ") #options are displayed
+        spy_choice=input("What do you want to do \n 1. Add a status \n 2. Add a friend \n 0.Exit ") #asked to choose the option
 
         if spy_choice==1:
             print "Add a status"
@@ -52,7 +52,7 @@ elif spy_exist.upper()=="Y":
                 spy_is_online=True #checking if spy is online
                 print "Authentication is completed.Welcome " + spy_name + " age: "+ str(spy_age) + " rating: " + str(spy_rating) # typecasting integer to string
 
-                spy_chat(spy_name,spy_age,spy_rating)
+                spy_chat(spy_name,spy_age,spy_rating) #callinf functions spy_chat
             else:
                  print "You are not eligible for spy."
 
