@@ -5,12 +5,18 @@ def spy_chat(spy_name,spy_age,spy_rating): #defining the function
     print "Here are you're options " + spy_name
     show_menu=True
     while show_menu:
-        spy_choice=input("What do you want to do \n 1. Add a status \n 2. Add a friend \n 0.Exit ") #asked to choose the option
+        spy_choice=input("What do you want to do \n 1. Add a status \n 2. Add a friend \n 3.Send a secret message. \n 4.Read a secret message \n 5.Read chats from user \n 6.Exit ") #asked to choose the option
         if spy_choice==1:
             print "Add a status"
         elif spy_choice==2:
             print "Add a friend"
-        elif spy_choice==0:
+        elif spy_choice==3:
+            print "Send a secret message."
+        elif spy_choice==4:
+            print "Read a secret message."
+        elif spy_choice==5:
+            print "Read chats from user."
+        elif spy_choice==6:
             show_menu=False
         else:
             print "Invalid options"
