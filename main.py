@@ -1,13 +1,35 @@
 from spy_details import spy_name,spy_age,spy_rating #importing spy_name,spy_age,spy_rating from spy_details
 print"Hello Buddy"
 print"What's up?"
+Status_Message=["Every morning is a ray of hope","Workhard to make your dreams come true","Never work for satisfy others"]#displaying menu of old status listed
+def add_status(c_status): #defining function add_status
+    if c_status != None: #if there is nothing mentioned or choosed in or from status
+        print"Your current status is " + c_status
+    else:
+        print "You don't have any status currently."
+        existing_status=raw_input("You want to select from old status? Y/N ") #asking options which option you want to select either old status or not
+        if existing_status.upper()=="N":
+            new_status=raw_input("Enter your status: ")
+            if len(new_status)>0: #checking length of status
+                Status_Message.append(new_status)
+        elif existing_status.upper()=="Y":
+            serial_number=1
+            for old_status in Status_Message: #traversing in list Status_Message
+                print str(serial_number) +". "+ old_status
+                serial_number=serial_number + 1
+        user_choice=input("Enter your choice: ")
+        new_status=Status_Message[user_choice-1]
+        updated_status=new_status
+        return updated_status
 def spy_chat(spy_name,spy_age,spy_rating): #defining the function
     print "Here are you're options " + spy_name
+    current_status=None
     show_menu=True
     while show_menu:
         spy_choice=input("What do you want to do \n 1. Add a status \n 2. Add a friend \n 3.Send a secret message. \n 4.Read a secret message \n 5.Read chats from user \n 6.Exit ") #asked to choose the option
         if spy_choice==1:
-            print "Add a status"
+            current_status=add_status(current_status)
+            print "Updated status is  " + current_status
         elif spy_choice==2:
             print "Add a friend"
         elif spy_choice==3:
