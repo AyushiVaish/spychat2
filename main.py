@@ -5,7 +5,7 @@ time=datetime.now()  #.now() function which will return current date and time
 print time #printing returned current date and time
 print "Hello Buddy"
 print "What's up?"
-Status_Message=["Every morning is a ray of hope","Workhard to make your dreams come true","Never work for satisfy others"]#displaying menu of old status listed
+Status_Message=["Every morning is a ray of hope","Workhard to make your dreams come true","Never work to satisfy others"]#displaying menu of old status listed
 friends=[{'name':'sushant','age':24,'rating':3.5,'is_online':True,'chats':[]},{'name':'aman','age':29,'rating':4,'is_online':True,'chats':[]}] #making list of friends which consists of dictionaries.
 def add_status(c_status): #defining function add_status
     if c_status != None: #if there is nothing mentioned or choosed in or from status
