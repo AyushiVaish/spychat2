@@ -1,5 +1,5 @@
 from spy_details import spy #importing spy_name,spy_age,spy_rating from spy_details
-from steganography.steganography import Steganography #importing Steganography module from steganography repository of steganography class
+from steganography.steganography import Steganography #importing Steganography module from steganography class of steganography library
 from datetime import datetime #importing datetime module from datetime class
 time=datetime.now()  #.now() function which will return current date and time
 print time #printing returned current date and time
