@@ -1,4 +1,6 @@
 from datetime import datetime
+
+
 class Spy:
     def __init__ (self,name,salutation,age,rating):
         self.name=salutation + " " +name
