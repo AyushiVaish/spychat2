@@ -91,7 +91,7 @@ def send_a_message(): #definig function
         print "Your secret text has been successfully encoded."
         with open ('chat.csv','a') as chats_data:
             writer=csv.writer(chats_data)
-            writer.writerow([secret_text,time.strftime('%d %m %H'),spy.name,friends[selected_frnd].name])
+            writer.writerow([secret_text,time,spy.name,friends[selected_frnd].name])
 def read_a_message():
     selected_frnd=select_a_friend()
     output_path=raw_input("Which image you want to decode? ") #asking about which image user need to decode
